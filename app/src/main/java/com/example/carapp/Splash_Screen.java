@@ -16,12 +16,13 @@ public class Splash_Screen extends AppCompatActivity {
         Thread thread = new Thread(){
             public void run(){
                 try{
-                    sleep(5000);
+                    sleep(2000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
                     Intent intent = new Intent(Splash_Screen.this,Login.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         };
