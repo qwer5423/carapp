@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">carapp</string>
     <string name="foxing_time">foxing_time</string>
+    <string name="produce">Produced by Fcu</string>
 </resources>
