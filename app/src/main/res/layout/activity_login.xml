@@ -50,7 +50,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textSize="16sp"
-            android:textColor="@color/text_color"/>
+            android:textColor="@color/text_color"
+             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
