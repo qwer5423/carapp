@@ -11,4 +11,5 @@
     <color name="bg_splash_start">#D82525</color>
     <color name="bg_splash_end">#2012C2</color>
     <color name="splash_title">#346F64</color>
+    <color name="text_color">#FFAD33</color>
 </resources>

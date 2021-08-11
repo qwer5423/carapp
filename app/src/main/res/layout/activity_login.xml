@@ -15,34 +15,43 @@
         android:layout_gravity="center"
         android:src="@drawable/logo" />
 
-    <EditText
-        android:id="@+id/account"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="375sp"
-        android:layout_height="50dp"
-        android:textSize="16sp"
-        android:textColor="#FFAD33"
-        android:layout_marginTop="50sp"
-        android:background="@drawable/btn_user"
+        android:layout_height ="wrap_content"
         android:layout_gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:drawableLeft="@drawable/user"
-        android:hint="Username"/>
+        android:layout_marginTop="50dp"
+        app:boxStrokeWidth="2dp"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+        android:hint="Username">
+        <EditText
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeWidth="2dp"
+        android:layout_width="375sp"
+        android:layout_height ="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true"
+        android:hint="Password">
 
-    <EditText
-        android:id="@+id/pwd"
-        android:layout_width="375sp"
-        android:layout_gravity="center"
-        android:layout_height="50dp"
-        android:textSize="16sp"
-        android:textColor="#FFAD33"
-        android:layout_marginTop="10sp"
-        android:background="@drawable/btn_user"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:drawableLeft="@drawable/icon_pwd"
-        android:layout_below="@+id/account"
-        android:hint="Password"/>
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_login"
@@ -55,6 +64,7 @@
         android:textColor="#FFF"
         android:textSize="20sp"
         app:backgroundTint="#FF9800" />
+
 
 
 </LinearLayout>
