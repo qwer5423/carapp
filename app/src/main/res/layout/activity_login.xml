@@ -28,9 +28,10 @@
             android:id="@+id/account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
             android:textSize="16sp"
-            android:textColor="@color/text_color"/>
+            android:textColor="@color/text_color"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -48,9 +49,10 @@
             android:id="@+id/pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
             android:textSize="16sp"
             android:textColor="@color/text_color"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
              />
     </com.google.android.material.textfield.TextInputLayout>
 
