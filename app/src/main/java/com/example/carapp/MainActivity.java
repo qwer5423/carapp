@@ -17,7 +17,7 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
     private DLRoundMenuView dlRoundMenuView;
     private Context mContext = this;
-    private VideoView videoView;
+    VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(mContext, "点击了："+position,Toast.LENGTH_SHORT).show();
                 //Log.e("TAG", "点击了："+position);
                 if(position==-1){
-                    RtspStream(" https://3664de286dda.ngrok.io");
+                    RtspStream("https://3664de286dda.ngrok.io");
                 }
             }
         });
