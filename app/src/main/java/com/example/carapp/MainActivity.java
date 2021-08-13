@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        videoView = (VideoView) this.findViewById(R.id.rtspVideo);
         setContentView(R.layout.activity_main);
         dlRoundMenuView = findViewById(R.id.dl_rmv);
+        videoView = (VideoView) this.findViewById(R.id.rtspVideo);
         dlRoundMenuView.setOnMenuClickListener(new OnMenuClickListener() {
             @Override
             public void OnMenuClick(int position) {
