@@ -30,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(mContext, "点击了："+position,Toast.LENGTH_SHORT).show();
                 //Log.e("TAG", "点击了："+position);
                 if(position==-1){
-                    RtspStream("https://3664de286dda.ngrok.io");
+                    try {
+                        RtspStream("https://3664de286dda.ngrok.io");
+                        Toast.makeText(mContext, "連線中",Toast.LENGTH_SHORT).show();
+                    }
+                    catch(Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(mContext, "連線失敗",Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
