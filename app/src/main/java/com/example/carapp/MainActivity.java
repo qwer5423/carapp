@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.dlong.rep.dlroundmenuview.DLRoundMenuView;
 import com.dlong.rep.dlroundmenuview.Interface.OnMenuClickListener;
 import com.dlong.rep.dlroundmenuview.Interface.OnMenuTouchListener;
+import com.example.carapp.mqtt.Mqtt_Client;
+
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         dlRoundMenuView = findViewById(R.id.dl_rmv);
         videoView = (VideoView) this.findViewById(R.id.rtspVideo);
+        Mqtt_Client mqtt_client = new Mqtt_Client();
         dlRoundMenuView.setOnMenuClickListener(new OnMenuClickListener() {
             @Override
             public void OnMenuClick(int position) {
@@ -37,6 +40,42 @@ public class MainActivity extends AppCompatActivity {
                     catch(Exception e) {
                         e.printStackTrace();
                         Toast.makeText(mContext, "連線失敗",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                if(position == 0){
+                    Toast.makeText(mContext, "上",Toast.LENGTH_SHORT).show();
+                    try {
+                        mqtt_client.sendMsg("0");
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+                else if(position == 1){
+                    Toast.makeText(mContext, "右",Toast.LENGTH_SHORT).show();
+                    try {
+                        mqtt_client.sendMsg("1");
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+                else if(position == 2){
+                    Toast.makeText(mContext, "下",Toast.LENGTH_SHORT).show();
+                    try {
+                        mqtt_client.sendMsg("2");
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+                else if(position == 3){
+                    Toast.makeText(mContext, "左",Toast.LENGTH_SHORT).show();
+                    try {
+                        mqtt_client.sendMsg("3");
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
                     }
                 }
             }

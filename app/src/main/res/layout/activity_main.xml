@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:id="@+id/camtitle"
@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/camtitle" />
 
-    <EditText
+    <TextView
         android:id="@+id/camsub"
         android:layout_width="match_parent"
         android:layout_height="50sp"
