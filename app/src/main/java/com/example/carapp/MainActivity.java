@@ -21,16 +21,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        videoView = (VideoView) this.findViewById(R.id.rtspVideo);
         setContentView(R.layout.activity_main);
         dlRoundMenuView = findViewById(R.id.dl_rmv);
+        videoView = (VideoView) this.findViewById(R.id.rtspVideo);
         dlRoundMenuView.setOnMenuClickListener(new OnMenuClickListener() {
             @Override
             public void OnMenuClick(int position) {
                 //Toast.makeText(mContext, "点击了："+position,Toast.LENGTH_SHORT).show();
                 //Log.e("TAG", "点击了："+position);
                 if(position==-1){
-                    RtspStream(" https://3664de286dda.ngrok.io");
+                    RtspStream("https://3664de286dda.ngrok.io");
                 }
             }
         });
