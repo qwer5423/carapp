@@ -17,7 +17,7 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
     private DLRoundMenuView dlRoundMenuView;
     private Context mContext = this;
-    VideoView videoView;
+    private VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
