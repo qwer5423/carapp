@@ -22,6 +22,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/text_color"
+        app:hintTextColor="@color/text_color"
         app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
         android:hint="Username">
         <EditText
@@ -42,6 +44,8 @@
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/ic_baseline_lock_24"
         app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:boxStrokeColor="@color/text_color"
+        app:hintTextColor="@color/text_color"
         app:passwordToggleEnabled="true"
         android:hint="Password">
 
