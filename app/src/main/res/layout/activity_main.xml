@@ -43,4 +43,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.857" />
 
+    <ImageButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_refresh_24"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="406dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
