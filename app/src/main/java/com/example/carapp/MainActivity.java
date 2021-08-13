@@ -28,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void OnMenuClick(int position) {
                 //Toast.makeText(mContext, "点击了："+position,Toast.LENGTH_SHORT).show();
-                Log.e("TAG", "点击了："+position);
+                //Log.e("TAG", "点击了："+position);
+                if(position==-1){
+                    RtspStream(" https://3664de286dda.ngrok.io");
+                }
             }
         });
-        dlRoundMenuView.setOnMenuTouchListener((event, position) -> {
-            Toast.makeText(mContext, "点击了："+position+event.toString(),Toast.LENGTH_SHORT).show();
-        });
+        //dlRoundMenuView.setOnMenuTouchListener((event, position) -> {
+            //Toast.makeText(mContext, "点击了："+position+event.toString(),Toast.LENGTH_SHORT).show();
+        //});
     }
 
 
