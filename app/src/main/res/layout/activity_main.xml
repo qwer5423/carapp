@@ -32,7 +32,7 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rtspVideo" />
-    
+
     <com.dlong.rep.dlroundmenuview.DLRoundMenuView
         android:id="@+id/dl_rmv"
         android:layout_width="200dp"
