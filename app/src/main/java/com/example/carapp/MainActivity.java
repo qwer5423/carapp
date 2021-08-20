@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         videoView.setVisibility(View.GONE);
         videoView.stopPlayback();
         videoView.setVisibility(View.VISIBLE);
-        RtspStream("https://d175efc62a6b.ngrok.io");
+        RtspStream("http://892c5832b13d.ngrok.io");
     }
 
 }
