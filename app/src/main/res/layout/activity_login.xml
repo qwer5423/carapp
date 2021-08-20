@@ -57,6 +57,7 @@
             android:textColor="@color/text_color"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:inputType="textPassword"
              />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -1,5 +1,9 @@
 package com.example.carapp.mqtt;
 
+import android.widget.Toast;
+
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -10,9 +14,11 @@ public class Mqtt_Client {
     String subTopic = "liao/topic";
     String pubTopic = "liao/topic";
     String content;
-    int qos = 2;
+    int qos = 1;
     String broker = "tcp://broker.emqx.io:1883";
     String clientId = "emqx_test";
+    private String link;
+    String mContext;
     private MqttClient client;
     MemoryPersistence persistence = new MemoryPersistence();
     public Mqtt_Client(){
@@ -29,6 +35,13 @@ public class Mqtt_Client {
         this.client.publish(pubTopic, message);
         System.out.println("Message published");
     }
+    public void setLink(String Link){
+        this.link = Link;
+        System.out.println(this.link);
+    }
+    public String getLink(){
+        return this.link;
+    }
     public void Connect(){
         try {
             MqttClient client = new MqttClient(broker, clientId, persistence);
@@ -41,7 +54,28 @@ public class Mqtt_Client {
             connOpts.setCleanSession(true);
 
             // 设置回调
-            //client.setCallback(new OnMessageCallback());
+            client.setCallback(new MqttCallback() {
+                @Override
+                public void connectionLost(Throwable cause) {
+
+                }
+
+                @Override
+                public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    String tmp;
+                    tmp = new String(message.getPayload());
+                    System.out.println("123");
+                    System.out.println("接收訊息主題 : " + topic);
+                    System.out.println("接收訊息Qos : " + message.getQos());
+                    System.out.println("接收訊息內容 : " + tmp);
+                    setLink(tmp);
+                }
+
+                @Override
+                public void deliveryComplete(IMqttDeliveryToken token) {
+
+                }
+            });
 
             // 建立连接
             System.out.println("Connecting to broker: " + broker);
