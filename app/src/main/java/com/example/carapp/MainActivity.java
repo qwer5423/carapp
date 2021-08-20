@@ -180,11 +180,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
         videoView.setVisibility(View.GONE);
         videoView.stopPlayback();
         videoView.setVisibility(View.VISIBLE);
-<<<<<<< HEAD
-        RtspStream("http://892c5832b13d.ngrok.io");
-=======
         RtspStream(mqtt_link);
->>>>>>> e2222193ef7d0e0f39dabc3b497df4e5818454ed
     }
 
     @Override
